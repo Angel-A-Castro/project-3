@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Maps | Angel Castro</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <script src="js/main.js" defer></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxiye-aPcyvXjK9NPHW0PEGb2DsqKJLjg&callback=initMap"
+      async
+      defer>
+    </script>
+  </head>
+  <body class="page-maps">
+    <header>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">index.html</a></li>
+          <li><a href="resume.html">resume.html</a></li>
+          <li><a href="interests.html">interests.html</a></li>
+          <li><a href="maps.html" aria-current="page">maps.html</a></li>
+        </ul>
+      </nav>
+      <h1>Angel Castro</h1>
+      <p>Google Maps API Page</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Map</h2>
+        <p>
+          This map includes multiple features beyond the base code: three markers with info windows,
+          a polyline connecting points, and optional geolocation to center the map near the user.
+        </p>
+        <div id="map">Loading map...</div>
+        <p class="map-note">
+          If the map does not load, confirm your API key is valid and that billing is enabled for the key.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Angel Castro Maps</p>
+    </footer>
+  </body>
+</html>

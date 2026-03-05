@@ -151,7 +151,8 @@ figcaption {
 /* Shared layout */
 .page-home main,
 .page-resume main,
-.page-interests main {
+.page-interests main,
+.page-maps main {
   margin-left: auto;
   margin-right: auto;
 }
@@ -182,6 +183,31 @@ figcaption {
   color: #1f5f99;
 }
 
+/* Slider */
+.slider {
+  margin-top: 1rem;
+}
+
+.slider-controls {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.slider-controls button {
+  font: inherit;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.35rem;
+  border: 0.0625rem solid #bcd5ea;
+  background-color: #ffffff;
+}
+
+.slider-controls button:hover {
+  background-color: #e6f2fb;
+}
+
 /* RESUME PAGE (fixed layout example) */
 .page-resume main {
   width: 48rem;
@@ -208,7 +234,7 @@ figcaption {
   color: #1d4f7c;
 }
 
-/* INTERESTS PAGE (fluid layout example) */
+/* INTERESTS PAGE (mobile-first base) */
 .page-interests main {
   width: 94%;
   max-width: 72rem;
@@ -245,7 +271,49 @@ figcaption {
   color: #245b8f;
 }
 
-/* Responsive */
+/* MAPS PAGE */
+.page-maps main {
+  width: 92%;
+  max-width: 70rem;
+}
+
+#map {
+  width: 100%;
+  height: 60vh;
+  border: 0.0625rem solid #bcd5ea;
+  border-radius: 0.5rem;
+}
+
+.map-note {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* Project 3: Two min-width media queries (Interests page) */
+/* Media Query 1: >= 36rem (5+ changes) */
+@media (min-width: 36rem) {
+  .page-interests main {
+    width: 90%;
+  }
+
+  .page-interests section {
+    padding: 1.25rem;
+  }
+
+  .page-interests h1 {
+    font-size: 2.2rem;
+  }
+
+  .page-interests ul {
+    padding-left: 1.75rem;
+  }
+
+  .page-interests figure {
+    max-width: 46rem;
+  }
+}
+
+/* Media Query 2: >= 60rem (5+ changes) */
 @media (min-width: 60rem) {
   header,
   main,
@@ -255,6 +323,18 @@ figcaption {
 
   nav ul {
     gap: 1.25rem;
+  }
+
+  .page-interests main {
+    width: 82%;
+  }
+
+  .page-interests section {
+    display: flow-root;
+  }
+
+  .page-interests iframe {
+    border-width: 0.125rem;
   }
 
   h1 {

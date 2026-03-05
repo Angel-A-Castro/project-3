@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+:root {
+  font-size: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #eef5fb;
+  color: #1a1a1a;
+}
+
+header,
+main,
+footer {
+  padding: 1.5rem;
+}
+
+header {
+  background-color: #dbe9f6;
+  border-bottom: 0.25rem solid #b5d2ea;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  display: block;
+  height: 0.35rem;
+  margin-top: 1rem;
+  border-radius: 0.35rem;
+  background-color: #7fb4e0;
+}
+
+footer {
+  background-color: #dbe9f6;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #3b3b3b;
+}
+
+main {
+  background-color: #ffffff;
+  border: 0.0625rem solid #d7e6f3;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(36, 91, 143, 0.12);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #245b8f;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-top: 0.75rem;
+}
+
+ul,
+ol {
+  margin-top: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+section + section {
+  margin-top: 1.25rem;
+}
+
+/* Links in content */
+main a {
+  color: #1e4f7a;
+  text-decoration: underline;
+  text-decoration-thickness: 0.12rem;
+  text-underline-offset: 0.15rem;
+}
+
+main a:hover {
+  color: #0d2f4f;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+nav li {
+  background-color: #ffffff;
+  border: 0.0625rem solid #bcd5ea;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.35rem;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+nav li:hover {
+  background-color: #e6f2fb;
+  transform: translateY(-0.1rem);
+}
+
+nav a {
+  text-decoration: none;
+  color: #1e4f7a;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #0d2f4f;
+  text-decoration: underline;
+}
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* Images */
+figure {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40rem;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+}
+
+/* Shared layout */
+.page-home main,
+.page-resume main,
+.page-interests main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reusable callout */
+.callout {
+  background-color: #e6f2fb;
+  border-left: 0.3rem solid #7fb4e0;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+
+/* HOME PAGE */
+.page-home main {
+  width: 92%;
+  max-width: 70rem;
+}
+
+.page-home section {
+  background-color: #f5faff;
+  border: 0.0625rem solid #dcebf7;
+  padding: 1.2rem;
+  border-radius: 0.4rem;
+}
+
+.page-home h2 {
+  color: #1f5f99;
+}
+
+/* RESUME PAGE (fixed layout example) */
+.page-resume main {
+  width: 48rem;
+  max-width: 95%;
+}
+
+.page-resume address {
+  font-style: normal;
+  background-color: #f5faff;
+  border: 0.0625rem solid #dcebf7;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.page-resume article {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 0.3rem solid #7fb4e0;
+  background-color: #f7fbff;
+  border-radius: 0.25rem;
+}
+
+.page-resume h2 {
+  color: #1d4f7c;
+}
+
+/* INTERESTS PAGE (fluid layout example) */
+.page-interests main {
+  width: 94%;
+  max-width: 72rem;
+}
+
+.page-interests section {
+  background-color: #f5faff;
+  border: 0.0625rem solid #dcebf7;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.page-interests iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0.0625rem solid #bcd5ea;
+  border-radius: 0.25rem;
+}
+
+.page-interests h2 {
+  color: #2a6fa6;
+}
+
+/* List marker color */
+.page-home main ul li,
+.page-interests main ul li,
+.page-resume main ul li {
+  margin-top: 0.35rem;
+}
+
+.page-home main ul li::marker,
+.page-interests main ul li::marker,
+.page-resume main ul li::marker {
+  color: #245b8f;
+}
+
+/* Responsive */
+@media (min-width: 60rem) {
+  header,
+  main,
+  footer {
+    padding: 2rem;
+  }
+
+  nav ul {
+    gap: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+}

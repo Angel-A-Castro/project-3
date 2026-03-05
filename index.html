@@ -5,6 +5,7 @@
     <title>Home | Angel Castro</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/screen.css">
+    <script src="js/main.js" defer></script>
   </head>
   <body class="page-home">
     <header>
@@ -13,10 +14,11 @@
           <li><a href="index.html" aria-current="page">index.html</a></li>
           <li><a href="resume.html">resume.html</a></li>
           <li><a href="interests.html">interests.html</a></li>
+          <li><a href="maps.html">maps.html</a></li>
         </ul>
       </nav>
       <h1>Angel Castro</h1>
-      <p>Welcome to my Project 2 website.</p>
+      <p>Welcome to my Project 3 website.</p>
     </header>
 
     <main>
@@ -24,29 +26,27 @@
         <h2>Introduction</h2>
         <p>
           Hello, my name is Angel Castro. This website is part of my web development coursework.
-          It builds on my Project 1 site by adding CSS while keeping the same three-page structure.
-        </p>
-        <p>
-          I am pursuing a Bachelor of Information Technology through the Illinois Institute of
-          Technology program offered on Coursera. I have already completed an associate degree
-          and graduated high school, and I am continuing my education to grow my technical skills.
+          Project 3 adds JavaScript tools and a maps page while keeping the original structure.
         </p>
         <p class="callout">
-          Quick navigation: view my <a href="resume.html">future resume</a> or check out my
-          <a href="interests.html">interests</a>.
+          Quick navigation: view my <a href="resume.html">future resume</a>, my
+          <a href="interests.html">interests</a>, or the <a href="maps.html">maps page</a>.
         </p>
       </section>
 
-      <section>
-        <h2>What This Site Includes</h2>
-        <ul>
-          <li>A welcome page introducing the website</li>
-          <li>A future resume with education and expected skills</li>
-          <li>A page about hobbies and interests with embedded media</li>
-        </ul>
+      <section class="slider" data-slider>
+        <h2>Picture Slider</h2>
         <p>
-          Each page includes the same navigation menu at the top so it is easy to move between pages.
+          This slider is built with JavaScript and uses local images from the images folder.
         </p>
+        <figure>
+          <img data-slider-image src="images/slide1.jpg" alt="Slide 1">
+          <figcaption data-slider-caption>Slide</figcaption>
+        </figure>
+        <div class="slider-controls">
+          <button type="button" data-slider-prev>Previous</button>
+          <button type="button" data-slider-next>Next</button>
+        </div>
       </section>
 
       <section>
@@ -55,19 +55,6 @@
           <img src="images/welcome.jpg" alt="Computer setup representing technology and learning">
           <figcaption>An image representing learning technology and web development.</figcaption>
         </figure>
-        <p>
-          This image is included to demonstrate how images can be added to an HTML page and styled
-          using external CSS files.
-        </p>
-      </section>
-
-      <section>
-        <h2>Goal</h2>
-        <p>
-          My goal is to create a clean, readable website that validates successfully and shows
-          consistent styling across all pages while still allowing each page to have its own
-          unique layout and content.
-        </p>
       </section>
     </main>
 

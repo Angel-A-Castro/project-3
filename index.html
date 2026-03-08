@@ -26,26 +26,28 @@
         <h2>Introduction</h2>
         <p>
           Hello, my name is Angel Castro. This website is part of my web development coursework.
-          Project 3 adds JavaScript tools and a maps page while keeping the original structure.
+          Project 3 adds JavaScript tools and a maps page while keeping the structure from my earlier projects.
         </p>
         <p class="callout">
-          Quick navigation: view my <a href="resume.html">future resume</a>, my
-          <a href="interests.html">interests</a>, or the <a href="maps.html">maps page</a>.
+          Quick navigation: visit my <a href="resume.html">future resume</a>, learn more about my
+          <a href="interests.html">interests</a>, or explore the <a href="maps.html">maps page</a>.
         </p>
       </section>
 
       <section class="slider" data-slider>
         <h2>Picture Slider</h2>
         <p>
-          This slider is built with JavaScript and uses local images from the images folder.
+          This slider is built with JavaScript and shows images connected to my interests.
         </p>
         <figure>
           <img data-slider-image src="images/slide1.jpg" alt="Slide 1">
           <figcaption data-slider-caption>Slide</figcaption>
         </figure>
+        <p class="slider-status" data-slider-status>Slide 1 of 3</p>
         <div class="slider-controls">
           <button type="button" data-slider-prev>Previous</button>
           <button type="button" data-slider-next>Next</button>
+          <button type="button" data-slider-pause>Pause</button>
         </div>
       </section>
 
@@ -55,11 +57,16 @@
           <img src="images/welcome.jpg" alt="Computer setup representing technology and learning">
           <figcaption>An image representing learning technology and web development.</figcaption>
         </figure>
+        <p>
+          This image represents my interest in technology, learning, and building useful projects.
+        </p>
       </section>
     </main>
 
     <footer>
       <p>Angel Castro</p>
     </footer>
+
+    <button type="button" class="back-to-top" data-back-to-top>Top</button>
   </body>
 </html>

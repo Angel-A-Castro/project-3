@@ -84,7 +84,6 @@ section + section {
   margin-top: 1.25rem;
 }
 
-/* Links in content */
 main a {
   color: #1e4f7a;
   text-decoration: underline;
@@ -96,7 +95,6 @@ main a:hover {
   color: #0d2f4f;
 }
 
-/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
@@ -125,16 +123,25 @@ nav a {
   font-weight: 600;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   color: #0d2f4f;
   text-decoration: underline;
 }
 
 nav a[aria-current="page"] {
   text-decoration: underline;
+  background-color: #e6f2fb;
+  padding: 0.2rem 0.35rem;
+  border-radius: 0.25rem;
 }
 
-/* Images */
+button:focus,
+a:focus {
+  outline: 0.125rem solid #245b8f;
+  outline-offset: 0.15rem;
+}
+
 figure {
   margin-top: 1rem;
   margin-left: auto;
@@ -148,7 +155,6 @@ figcaption {
   color: #4a4a4a;
 }
 
-/* Shared layout */
 .page-home main,
 .page-resume main,
 .page-interests main,
@@ -157,7 +163,6 @@ figcaption {
   margin-right: auto;
 }
 
-/* Reusable callout */
 .callout {
   background-color: #e6f2fb;
   border-left: 0.3rem solid #7fb4e0;
@@ -166,7 +171,6 @@ figcaption {
   margin-top: 1rem;
 }
 
-/* HOME PAGE */
 .page-home main {
   width: 92%;
   max-width: 70rem;
@@ -183,7 +187,6 @@ figcaption {
   color: #1f5f99;
 }
 
-/* Slider */
 .slider {
   margin-top: 1rem;
 }
@@ -208,7 +211,13 @@ figcaption {
   background-color: #e6f2fb;
 }
 
-/* RESUME PAGE (fixed layout example) */
+.slider-status {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #245b8f;
+}
+
 .page-resume main {
   width: 48rem;
   max-width: 95%;
@@ -234,7 +243,6 @@ figcaption {
   color: #1d4f7c;
 }
 
-/* INTERESTS PAGE (mobile-first base) */
 .page-interests main {
   width: 94%;
   max-width: 72rem;
@@ -258,7 +266,6 @@ figcaption {
   color: #2a6fa6;
 }
 
-/* List marker color */
 .page-home main ul li,
 .page-interests main ul li,
 .page-resume main ul li {
@@ -271,7 +278,6 @@ figcaption {
   color: #245b8f;
 }
 
-/* MAPS PAGE */
 .page-maps main {
   width: 92%;
   max-width: 70rem;
@@ -289,8 +295,18 @@ figcaption {
   font-size: 0.95rem;
 }
 
-/* Project 3: Two min-width media queries (Interests page) */
-/* Media Query 1: >= 36rem (5+ changes) */
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.7rem 1rem;
+  border: 0.0625rem solid #bcd5ea;
+  border-radius: 0.4rem;
+  background-color: #ffffff;
+  color: #1e4f7a;
+  font: inherit;
+}
+
 @media (min-width: 36rem) {
   .page-interests main {
     width: 90%;
@@ -313,7 +329,6 @@ figcaption {
   }
 }
 
-/* Media Query 2: >= 60rem (5+ changes) */
 @media (min-width: 60rem) {
   header,
   main,
@@ -335,6 +350,14 @@ figcaption {
 
   .page-interests iframe {
     border-width: 0.125rem;
+  }
+
+  .page-interests h2 {
+    font-size: 1.55rem;
+  }
+
+  .page-interests p {
+    font-size: 1.05rem;
   }
 
   h1 {
